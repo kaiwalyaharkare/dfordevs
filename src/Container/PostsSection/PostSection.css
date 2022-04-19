@@ -1,0 +1,7 @@
+.card__holder{
+display: grid;
+grid-auto-flow: row;
+}
+.card__array{
+    display: flex;
+}

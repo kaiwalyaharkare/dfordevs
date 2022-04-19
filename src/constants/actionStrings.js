@@ -1,0 +1,8 @@
+export const GETPOSTS = "GETPOSTS"
+export const GETPOSTSBYID = "GETPOSTSID"
+export const CREATEPOST = "CREATEPOSTS"
+export const DELETEPOSTS = "DELETEPOTS"
+export const AUTH = "AUTHACTION"
+export const LOGOUT = "AUTHLOGOUT"
+export const STARTLOADING = "STARTLOADING"
+export const ENDLOADING = "ENDLOADING"
