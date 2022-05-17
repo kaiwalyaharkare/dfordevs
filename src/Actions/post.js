@@ -26,6 +26,7 @@ export const createPost = (postdata) => async (dispatch) =>{
 
 export const deletePost = (postid) =>async (dispatch)=>{
     try{
+        console.log(postid)
         await api.deletePost(postid)
         dispatch({type:DELETEPOSTS,payload:postid})
     }

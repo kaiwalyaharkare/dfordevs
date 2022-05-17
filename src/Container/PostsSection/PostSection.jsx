@@ -6,11 +6,11 @@ import Cards from "../../Compoents/card/Card";
 import "./PostSection.css";
 import {Paper,CircularProgress} from '@mui/material'
 function PostSection() {
-  const posts = useSelector((state) => state.postReducer);
+  const Posts = useSelector((state) => state.postReducer);
   const user = localStorage.getItem("profile");
-  console.log(posts.isLoading);
+  console.log(Posts)
 
-  if (posts.isLoading) {
+  if (Posts.isLoading) {
     return (
       <Paper elevation={6} style={{padding:'100px'}} >
         <CircularProgress size="7em" />
@@ -19,8 +19,9 @@ function PostSection() {
   }
   return (
     <>
-      <Grid container className="card__holder">
-        {posts?.posts?.map((post) => (
+      <Grid container >
+        
+        {Posts?.posts?.map((post) => (
           <Cards key={post._id} post={post}></Cards>
         ))}
       </Grid>

@@ -42,7 +42,8 @@ export default function Cards(post) {
     window.location.href = `/post/${post.post._id}`;
   };
   const handleDelete = ()=>{
-    dispatch(deletePost(post?.post._id))
+    console.log("DElte")
+    dispatch(deletePost(post.post._id))
   }
   return (
     <Card
@@ -88,11 +89,12 @@ export default function Cards(post) {
         <IconButton aria-label="share">
           <ShareIcon></ShareIcon>
         </IconButton>
-        {user?.result?.googleId === post.post.post_id && (
-          <IconButton aria-label="delete" onClick ={()=>handleDelete}>
-            <DeleteIcon />
-          </IconButton>
-        )}
+        {user?.result?.googleId === post.post.post_id ? <>
+          <DeleteIcon onClick={handleDelete}/>  
+        </>:<></>
+        
+        }
+          
 
         <ExpandMore
           expand={expanded}

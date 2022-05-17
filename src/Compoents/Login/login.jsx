@@ -26,7 +26,7 @@ export default function Login() {
   return (
     <>
       <GoogleLogin
-        clientId="326368307181-gfc7ouqdbbclsks30udnlbe9al7bieps.apps.googleusercontent.com"
+        clientId="7583533507-0htmd16pt8pvde3fgspu82sdaajn4ujq.apps.googleusercontent.com"
         render={(renderprops) => (
           <>
             <Button
